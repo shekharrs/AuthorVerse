@@ -582,6 +582,8 @@ span {
     }
 }
 
+/* Register Form  */
+
 /* Login Form */
 
 .container {
@@ -638,7 +640,7 @@ button:hover {
 }
 
 #message {
-    color: red;
+    color: white;
 }
 
 #registerLink {
@@ -758,7 +760,219 @@ section{
 }
 
 
+/* Author Profile */
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #0ef;
+}
+.action-buttons button {
+    margin-right: 5px;
+}
+
+
+/* Tutorials */
+
+
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    display: block;
+    color: #0ef;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Campagin Planner */
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #042331;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .section {
+    margin-top: 50px;
+  }
+  
+  .box {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .edit-icon,
+  .delete-icon,
+  .share-icon {
+    font-size: 18px;
+    color: #333;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .strategy-btns {
+    margin-top: 20px;
+  }
+  
+  .strategy-btns .btn {
+    margin: 0 5px;
+  }
+  
+  .dropdown-box {
+    margin-top: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .dropdown-content ul li {
+    padding: 10px;
+  }
+  
+  .dropdown-content ul li:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown-box:hover .dropdown-content {
+    display: block;
+  }
+  
+
+/* Newseletter Swaps */
+
+/* .container {
+    text-align: center;
+    margin-top: 50px;
+  } */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .section {
+    margin-top: 50px;
+  }
+  /* .box {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  } */
+  .edit-icon,
+  .delete-icon,
+  .share-icon {
+    font-size: 18px;
+    color: #333;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .strategy-btns {
+    margin-top: 20px;
+  }
+  .strategy-btns .btn {
+    margin: 0 5px;
+  }
+
+/* Mailing List Integrations */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#button-container {
+    margin-top: 50px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: aqua;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; 
+}
+button:hover {
+    background-color: violet;
+} 
+
+  /* Integrations */
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.input-box, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.th {
+    background-color: #0ef;
+}
+.action-buttons button {
+    margin-right: 5px;
+}
+
+/* Author Profile Limite Reached! */
+
+  /* Book Collections */
+
+
+  
 /* BROWSER SETTINGS */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

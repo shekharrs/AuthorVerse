@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divided Page</title>
+<!-- <link rel="stylesheet" href="/style.css"> -->
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        height: 100%;
+    }
+    .left-side {
+        flex: 0 0 20%;
+        background-color: #f0f0f0;
+        border-right: 2px solid #ccc;
+        padding: 20px;
+    }
+    .quick-links {
+        padding-bottom: 20px;
+    }
+    .quick-links-header {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+    ul li a {
+        text-decoration: underline;
+    }
+    .right-side {
+        flex: 1;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="quick-links">
+                <p class="quick-links-header">Quick Links</p>
+                <ul>
+                    <li><a href="/HTML/Essentials/home.html">Home</a></li>
+                </ul>
+            </div>
+            <div class="schedule-links">
+                <p class="schedule-links-header">Schedule</p>
+                <ul>
+                    <li><a href="/HTML/Schedule/camp.html">Campaign Planner</a></li>
+                    <li><a href="#">Calendar</a></li>
+                </ul>
+                <div class="promotions-links">
+                    <p class="promotions-links-header">Promotions</p>
+                    <ul>
+                        <li><a href="/HTML/Promotions/group.html">Group Promos </a></li>
+                        <li><a href="/HTML/Promotions/newsletter.html">Newsletter</a></li>
+                    </ul>
+                    <div class="landing-links">
+                        <p class="landing-links-header">Landing Page</p>
+                        <ul>
+                            <li><a href="/HTML/Landing/collections.html">Book Collections</a></li>
+                        </ul>
+            </div>
+            <div class="account-links">
+                <p class="account-links-header">Account</p>
+                <ul>
+                    <li><a href="/HTML/Account/mailing_list_intergate.html">Posted Mailing Lists</a></li>
+                    <li><a href="/HTML/Account/integrations.html">Integrations</a></li>
+                    <li><a href="/HTML/Account/author_profile.html">Author Profiles</a></li>
+                </ul>
+    </div>
+        </div>
+        <div class="right-side">
+            <!-- Content for the right side goes here -->
+        </div>
+    </div>
+</body>
+</html>
+
+
