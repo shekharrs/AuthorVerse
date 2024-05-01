@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>User Registration</title>
-<link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Info </title>
+    <!-- <a href="/HTML/Essentials/navbar.html" class="NAVBAR"></a> -->
+
+    <link rel="stylesheet" href="/style.css">
+
+<style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 30%;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, button {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+  <div id="navbar-placeholder"></div>
+  <script src="navbar.js"></script>
+    <!-- <div class="container"> -->
+        <div class="box">
+            <h2>Account Info</h2></br>
+          </div>
 
-<h2>User Registration</h2>
-<form action="/submit-form" method="post">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password" required><br><br>
-  <input type="submit" value="Submit">
-</form>
+        <div class="box">
+            <form class="form" action="#">
+              <h2>Name</h2></br>
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+                <h2>Email</h2></br>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <h2>Password</h2></br>
+                <input type="password" name="password" placeholder="Password" required>
 
+            </form>
+        </div>
+
+      
+    <!-- </div> -->
 </body>
 </html>

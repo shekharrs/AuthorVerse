@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Create Account</title>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.
-15.4/css/all.min.css">
-<link href="https://fonts.googleapis.com/css?family=Poppins:wght@300;500;600& display=swap"
-rel="stylesheet">
-<!--Stylesheet -->
-<link rel="stylesheet" href="/style.css">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<script type="module" src="register.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/style.css">
+
+<style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 30%;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, button {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
 </head>
-
-
 <body>
-    <div class="background">
-    <div class="shape"></div>
-    <div class="shape"></div>
-    </div>
-    <form>
-    <h3>Create Account</h3>
-    <label for="username">Username</label>
-    <input type="email" placeholder="Email or Phone" id="email" required>
+    <!-- <div class="container"> -->
+        <div class="box">
+            <h2>Step 1: Create account</h2></br>
+            <p>Already created an account? <a href="#">Login!</a></p>
 
-    <label for="password">Password</label>
-    <input type="password" placeholder="Password" id="password" required>
-    
-<button id="submit" type="submit">Create Account</button>
-<div class="social">
-<div class="go" id="google"><i class="fab fa-google"></i> Google</div>
-<div class="fb" id="facebook"><i class="fab fa-facebook"></i> Facebook</div> </div>
-</div> 
-<div class="form">
-    <p>Have an account?
-    <span> <a href="login.html">Login Here</a></span>
-</div>
-</p>  
-</form>
-    </body>
+          </div>
+
+        <div class="box">
+            <form class="form" action="#">
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <button type="submit">Create Profile</button>
+                <p>By signing up, you agree to Author Verse's <a href="/HTML/Blogs/terms_service.html">Terms of Service</a> and <a href="/HTML/Blogs/privacy_policy.html">Privacy Policy</a></p>
+            </form>
+        </div>
+
+        <div class="box">
+            <p>Already created an account? <a href="/HTML/Essentials/login.html">Login!</a></p>
+        </div>
+    <!-- </div> -->
+</body>
+</html>
