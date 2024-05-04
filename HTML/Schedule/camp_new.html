@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Campaign</title>
-</head>
-<body>
-<!-- <div style="max-width: 600px; margin: 0px auto; padding: 0px 20px; width: 100%;"  -->
-<div class="ui large center aligned header">
-    <i aria-hidden="true" class="mail icon">  </i><h1>Plan Upcoming Campaigns</h1>
-    </div>
-</div>
-
-
-
-
-
-
 <!-- <form novalidate>
     <div class="ui large form">
     <div class="required field">
@@ -126,6 +107,128 @@ disabled="true">27</div>
 <div class="react-datepicker___week">
 <div class="react-datepicker_day react-datepicker___day--012 react-datepicker___day--weekend react-datepicker __day--highlighted" tabindex="-1" aria-label="Choose Sunday, May 12th, 2024" role="button" aria-disabled="fa lse">12</div>
 <div class="react-datepicker_day react-datepicker___day--013" tabindex="-1" aria-label="Choose Monday, May 1 -->
+<!-- 
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compact Calendar</title>
+    <link rel="stylesheet" href="/style.css">
+    <h1>Plan Upcoming Campaigns</h1>
+
+    <style>
+        .calendar {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+        }
+        .calendar table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .calendar th, .calendar td {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .calendar th {
+            background-color: #f0f0f0;
+        }
+        .calendar .selected {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calendar">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="7">January</th>
+            </tr>
+            <tr>
+                <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th>
+                <th>Thu</th><th>Fri</th><th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Calendar months will be generated dynamically here -->
+        </tbody>
+    </table>
+    <button id="addDateBtn" class="btn">Add Recurring Dates</button>
+</div>
+
+<script>
+    const tbody = document.querySelector('.calendar tbody');
+    const addDateBtn = document.getElementById('addDateBtn');
+
+    function createCalendar() {
+        const date = new Date();
+        const year = date.getFullYear();
+
+        let html = '';
+
+        for (let month = 0; month < 12; month++) {
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const firstDayOfMonth = new Date(year, month, 1).getDay();
+            
+            html += '<tr>';
+            html += '<th colspan="7">' + new Date(year, month, 1).toLocaleString('en-us', { month: 'long' }) + '</th>';
+            html += '</tr>';
+
+            html += '<tr>';
+
+            for (let i = 0; i < firstDayOfMonth; i++) {
+                html += '<td></td>';
+            }
+
+            for (let i = 1; i <= daysInMonth; i++) {
+                html += '<td>' + i + '</td>';
+                if ((i + firstDayOfMonth - 1) % 7 === 0) {
+                    html += '</tr><tr>';
+                }
+            }
+
+            html += '</tr>';
+        }
+
+        tbody.innerHTML = html;
+    }
+
+    createCalendar();
+
+    tbody.addEventListener('click', function(event) {
+        const target = event.target;
+        if (target.tagName === 'TD') {
+            const selectedDate = target.textContent;
+            alert('Selected date: ' + selectedDate);
+        }
+    });
+
+    addDateBtn.addEventListener('click', function() {
+        const selectedDate = document.querySelector('.selected');
+        if (selectedDate) {
+            alert('Recurring dates can be added for: ' + selectedDate.textContent);
+        } else {
+            alert('Please select a date from the calendar.');
+        }
+    });
+</script>
 
 </body>
 </html>

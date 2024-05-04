@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Author Profile</title>
+    <title>Link Collection</title>
     <link rel="stylesheet" href="/style.css">
 
 </head>
 <body>
-    <h1>Edit Author Profile</h1>
-    <div class="box">
+    <h1>Link Collection</h1>
+    <!-- <div class="box">
         <p>Your pen name and author email should match your account. To update these, go to your account page. <b>Note: </b>The associated name and email on your account is shared when you participate in cross-promos or request reader magnets, review copies, etc..   </p>
         </div>
         <div class="container">
@@ -18,30 +18,30 @@
                 <input type="file" id="image-upload" accept="image/*" onchange="previewImage(event)">
                 <img id="image-preview" src="#" alt="Image Preview">
             </div>
-            <button>Update Image</button>
+            <button>Update Image</button> -->
 
         </div>
 
 
         <form class="form" action="#">
             <div class="input-group">
-                <label for="penname">Pen Name</label>
-                <input type="text" id="penname" name="penname" placeholder="Pen Name" required>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Title" required>
             </div>
             <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <label for="profile">Author Profile</label>
+                <input type="profile" id="email" name="profile" placeholder="Author Profile" required>
             </div>
             <div class="input-group">
-                <label for="website">Website</label>
-                <input type="website" id="website" name="website" placeholder="Website" required>
+                <label for="description">Description</label>
+                <input type="description" id="description" name="description" placeholder="Description" required>
             </div>
         
         <!-- <div class="container"> -->
             <!-- <div class="box"> -->
                 <div class="input-group">
-                    <label for="amazon"><i class="fas fa-edit"></i> Amazon</label>
-                    <input type="text" id="amazon" name="amazon" placeholder="Amazon">
+                    <label for="url"><i class="fas fa-edit"></i> Website</label>
+                    <input type="url" id="website" name="website" placeholder="Website">
                 </div>
                 <div class="input-group">
                     <label for="facebook"><i class="fas fa-edit"></i> Facebook</label>
@@ -55,14 +55,11 @@
                     <label for="youtube"><i class="fas fa-edit"></i> YouTube</label>
                     <input type="text" id="youtube" name="youtube" placeholder="YouTube">
                 </div>
-                <button id="submitButton" class="alertButton" ><a href="#" ></a>Submit </button> 
+                <button id="submitButton" class="alertButton" ><a href="#" ></a>Another Site Option </button> 
             </form>
-
             <!-- </div> -->
-        <!-- </div> -->
-        
+        <!-- </div> -->    
 <style>
-
 .container {
     width: 15%;
     text-align: center;
@@ -116,10 +113,6 @@
     border-radius: 5px;
     box-sizing: border-box;
 }
-
-
-
-
 </style>        
 </body>
 </html>

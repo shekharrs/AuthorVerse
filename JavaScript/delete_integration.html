@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Integration</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+
+.alertButton {
+    background-color: #f44336;
+    color: 0ef;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .alertButton:hover {
+    background-color: #d32f2f;
+  }
+  
+  .alertModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .alertContent {
+    background-color: #0ef;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .alertContent p {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .alertContent button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .alertContent button.delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .alertContent button.cancel {
+    background-color: #4CAF50;
+    color: 0ef;
+  }
+  
+  .alertContent button:hover {
+    opacity: 0.8;
+  }
+  
+</style>
+</head>
+<body>
+<button id="deleteButton" class="alertButton">Delete</button>
+<!-- <script src="/JavaScript/delete.js"></script> -->
+<script> 
+
+    
+var deleteButton = document.getElementById("deleteButton");
+
+// Get the modal
+var modal = document.createElement("div");
+modal.className = "alertModal";
+
+// Insert modal content
+modal.innerHTML = `
+  <div class="alertContent">
+    <p>Are you sure you would like to delete the MailChimp mailing list integration?</p>
+      <br/>
+      <p>This is action will remove the integration from anywhere it's being used: reader magnets, direct downloads, or posted mailing lists. </p>
+    <button class="delete" id="deleteConfirm">Delete</button>
+    <button class="cancel" id="cancel">Cancel</button>
+  </div>
+`;
+
+// Append modal to body
+document.body.appendChild(modal);
+
+// Get the delete and cancel buttons inside the modal
+var deleteConfirmButton = document.getElementById("deleteConfirm");
+var cancelButton = document.getElementById("cancel");
+
+// When the user clicks the delete button, open the modal
+deleteButton.onclick = function () {
+  modal.style.display = "block";
+};
+
+// When the user clicks on deleteConfirmButton, close the modal and perform delete action
+deleteConfirmButton.onclick = function () {
+  alert("Delete action performed");
+  modal.style.display = "none";
+};
+
+// When the user clicks on cancelButton, close the modal
+cancelButton.onclick = function () {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+</script>
+
+<div class="alertModal">
+<div class="alertContent">
+<p>
+    Are you sure you would like to delete the MailChimp mailing list integration?
+</p>
+This is action will remove the integration from anywhere it's being used: reader magnets, direct downloads, or posted mailing lists.
+<br>
+Remove this universal book link from any group promos it's in. <br>
+<button class="delete" id="deleteConfirm">Delete</button>
+<button class="cancel" id="cancel">Cancel</button>
+</div>
+</div>
+</body>
+</html>
+

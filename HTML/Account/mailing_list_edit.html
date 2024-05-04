@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailing List Edit </title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <h1>Mailing List Edit</h1>
+    <div class="button-container">
+        <a href="/HTML/Essentials/index.html">
+            <button>Invite Other Authors</button>
+        </a>      
+        <a href="/HTML/Promotions/newsletter.html">
+            <button>Browse Newsletter Swaps</button>
+        </a>        
+        <a href="/HTML/Promotions/group.html">
+            <button>Group Promos</button>
+        </a>          
+
+    </div>
+
+    <div class="input-group">
+        <label for="list_name">Mailing List <i class="fas fa-edit"></i></label>
+        <input type="text" id="list_name" name="list_name" placeholder="Mailing List Name">
+    </div>
+    <div class="input-group">
+        <label for="profile">Author Profile <i class="fas fa-edit"></i></label>
+        <input type="text" id="profile" name="profile" placeholder="Author Profile">
+    </div>
+    <div class="input-group">
+        <label for="amazon">Distribution <i class="fas fa-edit"></i></label>
+        <select id="amazon" name="amazon">
+            <option value="select1">Amazon</option>
+            <option value="select2">Wide</option>
+            <option value="select3">Mixed</option>
+        </select>
+    </div>
+    
+            
+    <div class="newsletter-entry">
+        <div>Nishi's Monthly Newsletter</div>
+        <div>Nishi Tiwari</div>
+        <div>
+            List Size: 180 <br>
+            Open Rate: 39.4% <br>
+            Click Rate: 6.3%
+        </div>
+        <div>
+            <button>Update Stats</button>
+        </div>
+    </div>
+    <a href="/HTML/Schedule/camp.html">
+        <button>Post a campagin to Swap</button>
+    </a>     
+    
+    <style>
+        .button-container button {
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+.newsletter-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter-entry > div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+
+    </style>
+
+</body>
+</html>

@@ -94,6 +94,8 @@ section {
     animation: floatImage 4s ease-in-out infinite;
 }
 
+ 
+
 @keyframes floatImage {
     0% {
         transform: translateY(0);
@@ -175,6 +177,11 @@ section {
     font-weight: 600;
 }
 
+.p{
+   margin-right:  5px;
+   /* display: block; */
+}
+
 
 /* KEYFRAME ANIMATIONS */
 @keyframes slideRight {
@@ -194,7 +201,7 @@ section {
 
 .about {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     gap: 6rem;
     background: var(--second-bg-color);
@@ -245,7 +252,7 @@ span {
 }
 
 .services h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .services-container {
@@ -254,7 +261,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .services-container .services-box {
@@ -503,6 +510,15 @@ span {
         font-size: 2rem;
         margin: 3rem 0;
     }
+    
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333; /* Adjust as needed */
+        z-index: 1000; /* Ensure it's above other content */
+    }
+    
 
     .home {
         flex-direction: column;
@@ -584,22 +600,46 @@ span {
 
 /* Register Form  */
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.box {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+input, button {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+button {
+    cursor: pointer;
+}
+
 /* Login Form */
 
 .container {
     width: 300px;
     margin: 100px auto;
-    background-color:  rgb(10, 79, 84);
+    background-color:  rgb(89, 206, 197);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(143, 121, 121, 0.1);
     text-align: center;
+    justify-content: center; 
 }
 
 input[type="text"],
 input[type="password"],
 button {
-    width: 100%;
+    padding-top: 10px;
+    width: auto;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -608,8 +648,8 @@ button {
 }
 
 button {
-    background-color: #0ef;
-    color: #fff;
+    background-color: rgb(8, 39, 41);
+    color: black;
     border: none;
     cursor: pointer;
 }
@@ -646,6 +686,14 @@ button:hover {
 #registerLink {
     color: white;
     cursor: pointer;
+}
+
+/* Account Info */
+
+.box {
+    width: 0%;
+    padding: 20px;
+    border: 1px solid #ccc;
 }
 
 
@@ -893,6 +941,7 @@ th {
     border-radius: 5px;
     background-color: #f0f0f0;
     color: #333;
+    width: auto;
     text-decoration: none;
     font-size: 16px;
   }
@@ -935,17 +984,18 @@ body {
     margin-top: 50px;
 }
 button {
+    padding-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: aqua;
-    color: white;
+    background-color: rgb(34, 132, 132);
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px; 
 }
 button:hover {
-    background-color: violet;
+    background-color: rgb(13, 74, 121);
 } 
 
   /* Integrations */
@@ -961,7 +1011,7 @@ button:hover {
     border-bottom: 1px solid #ddd;
 }
 .th {
-    background-color: #0ef;
+    background-color: rgb(13, 74, 121);
 }
 .action-buttons button {
     margin-right: 5px;
@@ -971,8 +1021,35 @@ button:hover {
 
   /* Book Collections */
 
+/* Group Promo Opportunities */
 
-  
+
+.ul, li {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.dropdown {
+    display: inline-block;
+    margin-right: 10px;
+}
+a:link {
+    color: aqua; /* Change the color to aqua for unvisited links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:visited {
+    color: white; /* Change the color to blue for visited links */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+a:active {
+    color: red; /* Change the color to red for active links (when clicked) */
+}
+
 /* BROWSER SETTINGS */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
