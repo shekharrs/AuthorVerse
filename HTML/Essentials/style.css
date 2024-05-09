@@ -1,21 +1,46 @@
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
     margin-bottom: 20px;
+    height: 50vh;
 }
+
 .box {
-    width: 30%;
+    flex: 0 1 auto; /* Let the box grow to fit its content */
+    max-width: 80%; /* Limit the maximum width to 80% of the container */
     padding: 20px;
     border: 1px solid #ccc;
 }
+
+
 .form {
     display: flex;
     flex-direction: column;
 }
-input, button {
+
+input,
+button {
     margin-bottom: 10px;
     padding: 5px;
 }
+
+button {
+    cursor: pointer;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+button {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
 button {
     cursor: pointer;
 }

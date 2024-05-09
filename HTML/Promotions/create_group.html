@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Group</title>
+    <link rel="stylesheet" href="/style.css">
+
 </head>
 <body>
     <h1><i class="far fa-envelope"></i> Group Promos Created</h1>
   <div class="box">
     <p>Create a Group Promo timed to coincide with a your next free or discount promotion or build your mailing list with a reader magnet. Authors participating in a Group Promo are expected to share it with their mailing list subscribers.</p>
     <div class="dropdown-box">
-      <span style="color: blue; cursor: pointer;">Show features and use cases</span>
+      <span style="cursor: pointer;">Show features and use cases</span>
       <div class="dropdown-content">
         <div class="features">
           <h2>Features</h2>
@@ -31,16 +33,33 @@
       </div>
     </div>
     </div>
-    <button class="btn plan-btn">Plan Upcoming Campaigns</button>
+    <button class="btn plan-btn">Add Group Promo</button></br>
+    <button a href="#">Upcoming</button></a>
+    <button id="deleteButton" class="alertButton">Past</button>
+    <table>
+      <thead>
+          <tr>
+              <th>Actions</th>
+              <th>Group Promo</th>
+              <th>Type</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td class="alertButton">
+                  <button a href="/HTML/Promotions/edit_group.html" ></a>Edit </button> 
+                  <button a href="/JavaScript/delete_integration.html" ></a>Delete </button> 
 
-  <!-- <div class="container"> -->
-    <div class="box">
-      <p>Jodi's Monthly Newsletter</p>
-      <i class="fas fa-external-link-alt"></i>
-      <button class="btn"><i class="far fa-edit edit-icon"></i>Edit</button>
-      <button class="btn"><i class="far fa-trash-alt delete-icon"></i>Delete</button>
-      <button class="btn"><i class="fas fa-share-alt share-icon"></i>Share</button>
-    <!-- </div> -->
+                   <!-- <button id="deleteButton" class="alertButton" ><a href="/JavaScript/delete_integration.html" ></a>Delete </button>  -->
+              </td>
+              <td>MailChimp</td>
+              <td>example@gmail.com</td>
+          </tr>
+      </tbody>
+  </table>
+
 
     </div>
    

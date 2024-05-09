@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Group</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <h1>Edit Author Profile</h1>
+    <div class="box">
+        <p>Your pen name and author email should match your account. To update these, go to your account page. <b>Note:
+            </b>The associated name and email on your account is shared when you participate in cross-promos or request
+            reader magnets, review copies, etc.. </p>
+    </div>
+    <h2 class="center-text">Upload Image</h2>
+    <div class="container">
+        <div class="image-container">
+            <img id="image-preview" src="/images/fiction_books.jpg" alt="Image Preview">
+            <input type="file" id="image-upload" accept="image/*" onchange="previewImage(event)">
+
+        </div>
+    </div>
+
+    <label for="image-upload" class="custom-file-upload">
+        <button>Update Image</button>
+        <input type="file" id="image-upload" accept="image/*" onchange="previewImage(event)">
+    </label>
+    
+    <div class="info-container">
+        <p><span class="title">Type:</span> Sale</p>
+        <p><span class="title">Start Date:</span> Sun, Oct 1st</p>
+        <p><span class="title">End Date:</span> Thu, Nov 2nd</p>
+        <p><span class="title">Title (<span class="edit">Edit</span>):</span> Historical Fiction Books</p>
+        <p><span class="title">Author Profile:</span> Jodi Lea Stewart</p>
+        <p><span class="title">Book Submission Limit (<span class="edit">Edit</span>):</span> 3 per applicant</p>
+        <p><span class="title">Description for Authors (<span class="edit">Edit</span>):</span></p>
+        <ul>
+            <li>Historical Fiction Authors:</li>
+            <li>No erotica</li>
+            <li>It should be novel (no short stories)</li>
+            <li>Decent cover</li>
+        </ul>
+        <p><span class="title">Planned Campaign Integration (<span class="edit">Edit</span>):</span> Required</p>
+        <p><span class="title">Application Instructions for Authors (<span class="edit">Edit</span>):</span> Please send
+            this in your newsletter and on your socials.</p>
+        <p><span class="title">Tags (<span class="edit">Edit</span>):</span> Historical Fiction, Asian, Thriller,
+            Mystery, Multicultural</p>
+        <p><span class="title">Discussion Link (<span class="edit">Edit</span>):</span> None</p>
+    </div>
+    <h2>Pending Applications (Total: 25)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Author</th>
+                <th>Book</th>
+                <th>Applicant's Newsletter</th>
+                <th>Applicant's Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="alertButton">
+                    <button a href="/JavaScript/delete_integration.html"></a>Delete </button>
+
+                    <!-- <button id="deleteButton" class="alertButton" ><a href="/JavaScript/delete_integration.html" ></a>Delete </button>  -->
+                </td>
+
+                <td class="mail-icon">&#9993; Maria Jhonson</td>
+                <td>
+                    <img src="/images/The_Silent.png" alt="Image description" style="width: 100px; height: auto;">
+                </td>                
+                <td>Send Date: Sat, Oct 21st</br>
+                    Retail Distribution: Amazon-only</br>
+                    Posted Mailing List: Musings from Maria: Maria Johnson's Newsletter </br>
+                    List Size: 535</td>
+                <td class="alertButton">
+                      <li><button><a href="#">Accept</a></button></li>  
+                </td>
+                <!-- <td class="alertButton">
+                <li>    <button><a href="#">Ignore</a></button></li>  
+                </td> -->
+
+            </tr>
+        </tbody>
+    </table>
+    <style>
+
+.container {
+    text-align: center;
+    width: 850px;
+}
+
+.image-container {
+    width: 1000px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    border: 1px solid #ccc;
+    margin: 20px auto; /* Center the container */
+    overflow: hidden; /* Hide overflow */
+}
+
+#image-preview {
+    width: 100%; /* Make the image fill the container horizontally */
+    height: 100%; /* Make the image fill the container vertically */
+    object-fit: cover; /* Scale the image to cover the entire container */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: px 2px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+    </style>
+
+
+<script>
+    document.querySelector('.custom-file-upload').addEventListener('click', function() {
+    document.getElementById('image-upload').click();
+});
+
+</script>
+</body>
+
+</html>

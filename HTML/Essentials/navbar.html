@@ -22,6 +22,22 @@
                 <a href="#contact">Contact</a>
             </nav>
         </header>
-    
+    <script>
+        const functions = require('firebase-functions');
+
+exports.getNavbar = functions.https.onRequest((req, res) => {
+    const navbar = `
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    `;
+    res.status(200).send(navbar);
+});
+
+    </script>
 </body>
 </html>

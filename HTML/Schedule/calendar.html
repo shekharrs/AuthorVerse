@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendar</title>
+<link rel="stylesheet" href="/style.css">
+<h1>Calendar
+</h1>
+<div class="box">
+    <div class="button-container">
+        <label class="checkbox"><input type="checkbox"> Group Promos Created</label>
+        <div class="button-group">
+          <button><a href="">Group Promos Created</a></button>
+          <button><a href="">Group Promos Joined</a></button>
+        </div>
+      </div>
+    </br>
+      <div class="button-container">
+        <label class="checkbox"><input type="checkbox"> Group Promos Joined</label>
+        <div class="button-group">
+          <button><a href="camp.html">Campaign</a></button>
+          <button><a href="/HTML/Promotions/newsletter.html">Swaps</a></button>
+        </div>
+      </div>
+      <p>
+      </p>
+      </div>
+
+      <!-- <div class="box">
+        <button><a href="">Today</a></button>
+        <button><a href="">Back</a></button>
+        <button><a href="">Next</a></button>
+    </div> -->
+    <div class="box">
+
+        <div class="calendar">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="7" id="monthHeader">January - February</th>
+                    </tr>
+                    <tr>
+                        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th>
+                        <th>Thu</th><th>Fri</th><th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Calendar months will be generated dynamically here -->
+                </tbody>
+            </table>
+            <button id="prevMonthBtn" class="btn">Previous</button>
+            <button id="nextMonthBtn" class="btn">Next</button>
+        </div>
+    </div>
+
+        <script>
+            const tbody = document.querySelector('.calendar tbody');
+            const monthHeader = document.getElementById('monthHeader');
+            const prevMonthBtn = document.getElementById('prevMonthBtn');
+            const nextMonthBtn = document.getElementById('nextMonthBtn');
+        
+            let currentYear = new Date().getFullYear();
+            let currentMonth = 0;
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        
+            function createCalendar(year, monthOffset) {
+                currentYear = year;
+                currentMonth += monthOffset;
+        
+                let html = '';
+        
+                for (let month = currentMonth; month < currentMonth + 2; month++) {
+                    const currentMonthIndex = (month + 12) % 12; // Ensure month index is between 0 and 11
+                    const daysInMonth = new Date(currentYear, currentMonthIndex + 1, 0).getDate();
+                    const firstDayOfMonth = new Date(currentYear, currentMonthIndex, 1).getDay();
+                    
+                    html += '<tr>';
+                    html += '<th colspan="7">' + months[currentMonthIndex] + '</th>';
+                    html += '</tr>';
+        
+                    html += '<tr>';
+        
+                    for (let i = 0; i < firstDayOfMonth; i++) {
+                        html += '<td></td>';
+                    }
+        
+                    for (let i = 1; i <= daysInMonth; i++) {
+                        html += '<td>' + i + '</td>';
+                        if ((i + firstDayOfMonth - 1) % 7 === 0) {
+                            html += '</tr><tr>';
+                        }
+                    }
+        
+                    html += '</tr>';
+                }
+        
+                tbody.innerHTML = html;
+                updateMonthHeader();
+            }
+        
+            function updateMonthHeader() {
+                const currentMonthIndex = (currentMonth + 12) % 12;
+                const nextMonthIndex = (currentMonth + 2 + 12) % 12; // Changed from +1 to +2
+                monthHeader.textContent = months[currentMonthIndex] + ' - ' + months[nextMonthIndex];
+            }
+        
+            createCalendar(currentYear, 0);
+        
+            tbody.addEventListener('click', function(event) {
+                const target = event.target;
+                if (target.tagName === 'TD') {
+                    const selectedDate = target.textContent;
+                    alert('Selected date: ' + selectedDate);
+                }
+            });
+        
+            prevMonthBtn.addEventListener('click', function() {
+                createCalendar(currentYear, -2);
+            });
+        
+            nextMonthBtn.addEventListener('click', function() {
+                createCalendar(currentYear, 2);
+            });
+        </script>
+
+        <style>
+        
+        .box{
+            justify-content: center;
+            width: 450px;
+        }
+
+    </style>
+
+
+</body>
+</html>

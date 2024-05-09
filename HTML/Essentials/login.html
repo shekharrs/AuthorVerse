@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="/style.css">
-
+ 
 <style>
-        .container {
-    display: flex;
+     /* .container { */
+    /* display: flex;
     justify-content: center; /* Center content horizontally */
-    align-items: flex-start; /* Align content to the top */
-    padding-top: 50px; /* Adjust as needed */
-    height: 50vh; /* Set container height to full viewport height */
-        }
+    /*  align-items: flex-start; /* Align content to the top */
+      /*padding-top: 50px; /* Adjust as needed */
+     /* height: 50vh; /* Set container height to full viewport height */
+      /*    } */
         .box {
-            width: 30%;
+            width: 20%;
             padding: 20px;
             border: 1px solid #ccc;
         }
@@ -29,12 +29,12 @@
         }
         button {
             cursor: pointer;
-        }
-    </style>
+        } */
+    </style> 
 </head>
 <body>
-    <!-- <div class="container"> -->
-        <div class="box">
+    <div class="container">
+        <!-- <div class="box"> -->
             <h2>Login to your account</h2></br>
           </div>
 
@@ -42,7 +42,12 @@
             <form class="form" action="#">
                 <input type="email" name="email" placeholder="Email Address" required>
                 <input type="password" name="password" placeholder="Password" required>
-                <button type="submit"><a href="/HTML/Essentials/home.html"></a>Login</button>
+                <!-- <form action="/your_login_endpoint" method="post"> -->
+                    <!-- Your login form fields here -->
+                    <!-- <button type="submit" onclick="window.location.href='/HTML/Essentials/home.html'; return false;">Login</button> -->
+                    <button type="button" onclick="window.location.href='/HTML/Essentials/home.html';">Login</button>
+
+                <!-- </form> -->
                 <p>New to Author Verse? <a href="/HTML/Essentials/register.html"><u>Sign up</u></a></p>
             </form>
         </div>

@@ -167,9 +167,9 @@ section {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background: #0ef;
+    background: #042331;
     border-radius: 40px;
-    box-shadow: 0 0 10px #0ef;
+    box-shadow: 0 0 10px rgb(19, 108, 197);
     font-size: 20px;
     color: #1f242d;
     letter-spacing: 1px;
@@ -604,6 +604,7 @@ span {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    padding-top: 10px;
 }
 .box {
     width: 30%;
@@ -627,7 +628,7 @@ button {
 .container {
     width: 300px;
     margin: 100px auto;
-    background-color:  rgb(89, 206, 197);
+    background-color:  rgb(28, 97, 91);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(143, 121, 121, 0.1);
@@ -770,7 +771,7 @@ label #btn{
     left: 40px;
     top: 25px;
     font-size: 35px;
-    color: antiquewhite;
+    color: black;
     padding: 6px 12px;
     transition: all .5s;
 }
@@ -821,6 +822,7 @@ th, td {
 }
 th {
     background-color: #0ef;
+    color:#1f242d
 }
 .action-buttons button {
     margin-right: 5px;
@@ -938,8 +940,8 @@ th {
     padding: 10px 20px;
     margin: 10px;
     border: 2px solid #333;
-    border-radius: 5px;
-    background-color: #f0f0f0;
+    border-radius: 10px;
+    background-color: #0ef;
     color: #333;
     width: auto;
     text-decoration: none;
@@ -1025,8 +1027,8 @@ button:hover {
 
 
 .ul, li {
-    background-color: whitesmoke;
-    color: black;
+    /* background-color: ; */
+    color: white; 
 }
 
 .dropdown {
@@ -1034,7 +1036,7 @@ button:hover {
     margin-right: 10px;
 }
 a:link {
-    color: aqua; /* Change the color to aqua for unvisited links */
+    color: white; /* Change the color to aqua for unvisited links */
     text-decoration: none; /* Remove underline */
 }
 
@@ -1061,3 +1063,6 @@ input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
 }
+
+/* This color is also good
+color: rgb(65, 131, 196) */

@@ -7,11 +7,50 @@
 <title>Divided Page</title>
 <link rel="stylesheet" href="/style.css"> 
 
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        height: 100%;
+    }
+    .left-side {
+        flex: 0 0 20%;
+        background-color: 0oef;
+        border-right: 2px solid #ccc;
+        padding: 20px;
+    }
+    .quick-links {
+        padding-bottom: 20px;
+    }
+    .quick-links-header {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+    ul li a {
+        text-decoration: underline;
+    }
+    .right-side {
+        flex: 1;
+        padding: 20px;
+    }
+</style>
 
 </head>
 <body>
-    <div class="container">
-        <div class="left-side">
+    <div class="box"> -->
+        <!-- <div class="left-side">
             <div class="quick-links">
                 <p class="quick-links-header">Quick Links</p>
                 <ul>
@@ -50,12 +89,8 @@
         </div>
     </div>
 </body>
-</html>
-
-
--->
-
-<!DOCTYPE html>
+</html>  -->
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -108,9 +143,7 @@
 
 <header class="header">
     <a href="#" class="logo">Author Verse</a>
-
     <i class='bx bx-menu' id="menu-icon"></i>
-
     <nav class="navbar">
         <a href="/HTML/Essentials/home.html" class="active">Home</a>
         <a href="/HTML/Essentials/login.html">Login</a>
@@ -118,26 +151,10 @@
         <a href="/HTML/Essentials/index.html">Contact</a>
     </nav>
 </header>
-<!-- <div id="loginForm" class="form-container">
-<form> 
- <h2>Login</h2>
-<input type="text" id="loginUsername" placeholder="Username" required> <input type="password" id="loginPassword" placeholder="Password" required> <button type="submit">Login</button>
-</form>
-</div>
-<div id="registerForm" class="form-container">
-<form>
-<h2>Register</h2>
-<input type="text" id="registerUsername" placeholder="Username" required> <input type="password" id="registerPassword" placeholder="Password" required> <button type="submit">Register</button>
-</form>
-</div>
- <div id="dashboard" class="vertical-navbar">
-<a href="#" class="active">Dashboard</a>
-<a href="#">Profile</a>
-<a href="#">Settings</a> -->
 
 
 <!-- <div class="box"> -->
-    <div id="dashboard" class="vertical-navbar">
+     <div id="dashboard" class="vertical-navbar">
     <div class="left-side">
         <div class="quick-links">
             <p class="quick-links-header">Quick Links</p>
@@ -172,9 +189,9 @@
             </ul>
 </div>
     </div>
-    <!-- <div class="right-side">
+     <div class="right-side">
          Content for the right side goes here 
-    </div> -->
+    </div> 
 <!-- </div> -->
 
 <a href="/HTML/Essentials/index.html" id="logoutBtn">Logout</a> </div>
@@ -209,3 +226,22 @@
 </script>
 </body>
 </html>
+
+
+
+<!-- <div id="loginForm" class="form-container">
+<form> 
+ <h2>Login</h2>
+<input type="text" id="loginUsername" placeholder="Username" required> <input type="password" id="loginPassword" placeholder="Password" required> <button type="submit">Login</button>
+</form>
+</div>
+<div id="registerForm" class="form-container">
+<form>
+<h2>Register</h2>
+<input type="text" id="registerUsername" placeholder="Username" required> <input type="password" id="registerPassword" placeholder="Password" required> <button type="submit">Register</button>
+</form>
+</div>
+ <div id="dashboard" class="vertical-navbar">
+<a href="#" class="active">Dashboard</a>
+<a href="#">Profile</a>
+<a href="#">Settings</a> --> 
